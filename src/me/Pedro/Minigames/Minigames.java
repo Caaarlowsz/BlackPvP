@@ -8,39 +8,34 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import me.Pedro.Main;
 import me.Pedro.Eventos.KitAPI;
 
+public class Minigames implements Listener {
 
-public class Minigames implements Listener
-{
-	
 	public Minigames(Main main) {
 	}
 
-
 	public static void joinMinigame(Player p, ListGames minigame) {
-		
-			
-			if (minigame == ListGames.voidChallenge) {
-				new voidChallenge(p);
-			}
-			
-			if (minigame == ListGames.refillTest) {
-				new refillTest(p);
-			}
-			
+
+		if (minigame == ListGames.voidChallenge) {
+			new voidChallenge(p);
 		}
-		
-	
+
+		if (minigame == ListGames.refillTest) {
+			new refillTest(p);
+		}
+
+	}
+
 	@EventHandler
 	public void onQuit(PlayerQuitEvent e) {
 		if (KitAPI.voidChallenge.contains(e.getPlayer().getName())) {
 			KitAPI.voidChallenge.remove(e.getPlayer().getName());
 			KitAPI.voidChallengeTime.remove(e.getPlayer().getName());
 		}
-		
+
 		if (KitAPI.refillTest.contains(e.getPlayer().getName())) {
 			KitAPI.refillTest.remove(e.getPlayer().getName());
 			KitAPI.refillTestTime.remove(e.getPlayer().getName());
 		}
 	}
-	
+
 }

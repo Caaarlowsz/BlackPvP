@@ -14,9 +14,7 @@ import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -25,23 +23,22 @@ import org.bukkit.util.Vector;
 
 import me.Pedro.Main;
 import me.Pedro.XP.XpM;
-import ru.tehkode.permissions.bukkit.PermissionsEx;
 
 public class CaixaXP implements Listener {
 
 	@SuppressWarnings("unused")
 	private static HashMap<String, Long> cooldown = new HashMap<String, Long>();
 
-	 public static ArrayList<String> kitdiarioaladdin = new ArrayList<>();
-	 public static ArrayList<String> kitdiariowaterbender = new ArrayList<>();
-	 public static ArrayList<String> kitdiariofirebender = new ArrayList<>();
-	 public static ArrayList<String> kitdiraioTimeLord = new ArrayList<>();
-	 public static ArrayList<String> kitdiarioAjnin = new ArrayList<>();
-	 public static ArrayList<String> kitdiariomerlin = new ArrayList<>();
-	 public static ArrayList<String> kitdiarioDeshFire = new ArrayList<>();
-	 public static ArrayList<String> kitdiarioAntiStomper = new ArrayList<>();
-	 public static ArrayList<String> kitdiarioSonic = new ArrayList<>();
-	 public static ArrayList<String> setandokit = new ArrayList<>();
+	public static ArrayList<String> kitdiarioaladdin = new ArrayList<>();
+	public static ArrayList<String> kitdiariowaterbender = new ArrayList<>();
+	public static ArrayList<String> kitdiariofirebender = new ArrayList<>();
+	public static ArrayList<String> kitdiraioTimeLord = new ArrayList<>();
+	public static ArrayList<String> kitdiarioAjnin = new ArrayList<>();
+	public static ArrayList<String> kitdiariomerlin = new ArrayList<>();
+	public static ArrayList<String> kitdiarioDeshFire = new ArrayList<>();
+	public static ArrayList<String> kitdiarioAntiStomper = new ArrayList<>();
+	public static ArrayList<String> kitdiarioSonic = new ArrayList<>();
+	public static ArrayList<String> setandokit = new ArrayList<>();
 
 	public CaixaXP(Main main) {
 		// TODO Auto-generated constructor stub
@@ -62,7 +59,7 @@ public class CaixaXP implements Listener {
 		firework.setFireworkMeta(fMeta);
 	}
 
-	@SuppressWarnings({ "unused", "deprecation" })
+	@SuppressWarnings("unused")
 	@EventHandler
 	public void aoClicarNoInv(InventoryClickEvent e) {
 		Player jogador = (Player) e.getWhoClicked();
@@ -72,7 +69,6 @@ public class CaixaXP implements Listener {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	public static void Inventario(final Player jogador) {
 		final Inventory random = Bukkit.createInventory(jogador, 9, "ße ß7KITDIARIO ße");
 
@@ -87,32 +83,32 @@ public class CaixaXP implements Listener {
 		vidrometa1.setDisplayName("ß7Sorteando O Item");
 		vidro1.setItemMeta(vidrometa1);
 
-		final ItemStack vidrovermelho = new ItemStack(Material.getMaterial(160),1 ,(short)2);
+		final ItemStack vidrovermelho = new ItemStack(Material.getMaterial(160), 1, (short) 2);
 		vidrovermelho.setDurability((short) 14);
 		ItemMeta vidrovermelhoa = vidrovermelho.getItemMeta();
 		vidrovermelhoa.setDisplayName("ß7Sorteando O Item");
 		vidrovermelho.setItemMeta(vidrovermelhoa);
 
-		final ItemStack vidropreto = new ItemStack(Material.getMaterial(160),1 ,(short)4);
+		final ItemStack vidropreto = new ItemStack(Material.getMaterial(160), 1, (short) 4);
 		vidropreto.setDurability((short) 0);
 		ItemMeta vidropretoa = vidropreto.getItemMeta();
 		vidropretoa.setDisplayName("ß7Sorteando O Item");
 		vidropreto.setItemMeta(vidropretoa);
 
 		final ItemStack espadademadeira = new ItemStack(Material.GOLD_NUGGET);
-		  ItemMeta espadademadeiraa = espadademadeira.getItemMeta();
-		  espadademadeiraa.setDisplayName("ße ß7100r");
-		  espadademadeira.setItemMeta(espadademadeiraa);
+		ItemMeta espadademadeiraa = espadademadeira.getItemMeta();
+		espadademadeiraa.setDisplayName("ße ß7100r");
+		espadademadeira.setItemMeta(espadademadeiraa);
 
-		  final ItemStack sopa = new ItemStack(Material.GOLD_INGOT);
-		  ItemMeta sopaa = sopa.getItemMeta();
-		  sopaa.setDisplayName("ße ß71000");
-		  sopa.setItemMeta(sopaa);
+		final ItemStack sopa = new ItemStack(Material.GOLD_INGOT);
+		ItemMeta sopaa = sopa.getItemMeta();
+		sopaa.setDisplayName("ße ß71000");
+		sopa.setItemMeta(sopaa);
 
-		  final ItemStack ma√adourada = new ItemStack(Material.GOLD_BLOCK);
-		  ItemMeta ma√adouradaa = ma√adourada.getItemMeta();
-		  ma√adouradaa.setDisplayName("ße ß710000");
-		  ma√adourada.setItemMeta(ma√adouradaa);
+		final ItemStack ma√adourada = new ItemStack(Material.GOLD_BLOCK);
+		ItemMeta ma√adouradaa = ma√adourada.getItemMeta();
+		ma√adouradaa.setDisplayName("ße ß710000");
+		ma√adourada.setItemMeta(ma√adouradaa);
 
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {
@@ -124,10 +120,8 @@ public class CaixaXP implements Listener {
 					random.setItem(4, espadademadeira);
 					kitdiariofirebender.add(jogador.getName());
 
-
 					jogador.sendMessage("ßbÄ¢ ß7Voce ganhou 100 XP");
 					XpM.addMoney(jogador, 100);
-
 
 				}
 
@@ -135,7 +129,6 @@ public class CaixaXP implements Listener {
 					jogador.getWorld().playSound(jogador.getLocation(), Sound.CLICK, 10F, 10F);
 					random.setItem(4, sopa);
 					kitdiarioaladdin.add(jogador.getName());
-
 
 					jogador.sendMessage("ßbÄ¢ ß7Voce ganhou 1000 XP");
 					XpM.addMoney(jogador, 1000);
@@ -146,13 +139,11 @@ public class CaixaXP implements Listener {
 					random.setItem(4, ma√adourada);
 					kitdiariowaterbender.add(jogador.getName());
 
-
 					jogador.sendMessage("ßbÄ¢ ß7Voce ganhou 10000 XP");
 					XpM.addMoney(jogador, 10000);
 
-
 				}
-				}
+			}
 		}, 10L);
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {

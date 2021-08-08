@@ -2,9 +2,7 @@ package me.Pedro.Eventos;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -12,9 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
-
-import com.sk89q.jchronic.utils.Time;
 
 import me.Pedro.Main;
 
@@ -45,6 +40,7 @@ public class KitAPI implements Listener {
 	public static HashMap<String, Integer> voidChallengeTime = new HashMap<>();
 	public static ArrayList<String> refillTest = new ArrayList<String>();
 	public static HashMap<String, Integer> refillTestTime = new HashMap<>();
+
 	public KitAPI(Main main) {
 	}
 
@@ -69,7 +65,7 @@ public class KitAPI implements Listener {
 		Fisherman.remove(p.getName());
 		Teleman.remove(p.getName());
 		Thresh.remove(p.getName());
-		
+
 		voidChallengeTime.remove(p.getName());
 		voidChallenge.remove(p.getName());
 	}

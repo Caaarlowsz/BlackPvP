@@ -24,27 +24,26 @@ public class Kits implements Listener, CommandExecutor {
 	public static void guiKits1(Player p) {
 		Inventory inv = Bukkit.getServer().createInventory(p, 54, "§e§lKitPvP");
 
-		ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)4);
+		ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 4);
 		ItemMeta metav = vidro.getItemMeta();
 		metav.setDisplayName("");
 		vidro.setItemMeta(metav);
 
-		@SuppressWarnings("deprecation")
 		ItemStack ant = new ItemStack(Material.getMaterial(133), 1, (short) 14);
 		ItemMeta antv = ant.getItemMeta();
 		antv.setDisplayName("§a§LProxima");
 		ant.setItemMeta(antv);
-		
+
 		ItemStack ant1 = new ItemStack(Material.getMaterial(152), 1, (short) 14);
 		ItemMeta antv1 = ant1.getItemMeta();
 		antv1.setDisplayName("§c§LImpossivel voltar");
 		ant1.setItemMeta(antv1);
-		
+
 		ItemStack ant11 = new ItemStack(Material.getMaterial(384), 1, (short) 14);
 		ItemMeta antv11 = ant11.getItemMeta();
 		antv11.setDisplayName("§cXP");
 		ant11.setItemMeta(antv11);
-		
+
 		inv.setItem(0, ant1);
 		inv.setItem(8, ant);
 		inv.setItem(4, ant11);
@@ -359,7 +358,6 @@ public class Kits implements Listener, CommandExecutor {
 		return false;
 	}
 
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onPlayerCLickInventry(InventoryClickEvent e) {
 		Player p = (Player) e.getWhoClicked();

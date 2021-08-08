@@ -2,9 +2,7 @@ package me.Pedro.Minigames;
 
 import java.util.Random;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -13,13 +11,13 @@ import me.Pedro.Main;
 import me.Pedro.Eventos.API;
 import me.Pedro.Eventos.KitAPI;
 
-public class refillTest{
+public class refillTest {
 	Random rand = new Random();
 
 	public refillTest(final Player p) {
-		if (KitAPI.refillTest.contains(p.getName())){
+		if (KitAPI.refillTest.contains(p.getName())) {
 			p.sendMessage(API.sev + "§7Você ká está em um treino");
-			return ;
+			return;
 		}
 		new BukkitRunnable() {
 			int seconds = 5;
@@ -49,9 +47,10 @@ public class refillTest{
 				if (hasRefiled(p)) {
 					p.setExp(0);
 					p.getInventory().clear();
-					p.sendMessage(API.sev + "§7Você terminou seu refiltest , ele foi feito em §c" + Stringtimer.timerChecker(KitAPI.refillTestTime.get(p.getName())));
-		      		API.GiveSpawn(p);
-		    		p.teleport(p.getWorld().getSpawnLocation());
+					p.sendMessage(API.sev + "§7Você terminou seu refiltest , ele foi feito em §c"
+							+ Stringtimer.timerChecker(KitAPI.refillTestTime.get(p.getName())));
+					API.GiveSpawn(p);
+					p.teleport(p.getWorld().getSpawnLocation());
 					KitAPI.refillTest.remove(p.getName());
 					KitAPI.refillTestTime.remove(p.getName());
 					this.cancel();
@@ -62,7 +61,7 @@ public class refillTest{
 				if (!KitAPI.refillTest.contains(p.getName()) && seconds < 0) {
 					this.cancel();
 				}
-				
+
 				if (seconds >= 60) {
 					p.sendMessage(API.sev + "§7Se passou 1 minuto e você não terminou o refil , teste cancelado");
 					this.cancel();
@@ -79,9 +78,9 @@ public class refillTest{
 	}
 
 	private boolean hasRefiled(Player p) {
-		
+
 		try {
-			
+
 			if (p.getInventory().getItem(0).getType() == Material.AIR) {
 				return false;
 			}
@@ -109,7 +108,7 @@ public class refillTest{
 			if (p.getInventory().getItem(8).getType() == Material.AIR) {
 				return false;
 			}
-			
+
 		} catch (Exception e) {
 			return false;
 		}

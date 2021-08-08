@@ -1,6 +1,5 @@
 package me.Pedro.CMD;
 
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -87,7 +86,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Kangaroo.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Kangaroo");
-					API.setitem(p, Material.FIREWORK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.FIREWORK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -100,7 +100,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Thor.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Thor");
-					API.setitem(p, Material.WOOD_AXE, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.WOOD_AXE, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -113,7 +114,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Bazooka.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Bazooka");
-					API.setitem(p, Material.GOLD_BARDING, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.GOLD_BARDING, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE,
+							0, false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -162,7 +164,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Fisherman.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Fisherman");
-					API.setitem(p, Material.FISHING_ROD, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.FISHING_ROD, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE,
+							0, false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -175,7 +178,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Levitator.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Levitator");
-					API.setitem(p, Material.WOOL, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.WOOL, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -188,7 +192,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.DeathNote.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l DeathNote");
-					API.setitem(p, Material.BOOK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.BOOK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -201,7 +206,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.BurstMaster.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l BurstMaster");
-					API.setitem(p, Material.GOLD_HOE, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.GOLD_HOE, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -214,7 +220,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Sonic.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Sonic");
-					API.setitem(p, Material.LAPIS_BLOCK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.LAPIS_BLOCK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE,
+							0, false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -227,7 +234,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Deshfire.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Deshfire");
-					API.setitem(p, Material.REDSTONE_BLOCK, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.REDSTONE_BLOCK, "§7- §c§lKit §7- " + p.getName(), 1,
+							Enchantment.ARROW_DAMAGE, 0, false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -240,7 +248,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.TimeLord.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l TimeLord");
-					API.setitem(p, Material.WATCH, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.WATCH, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -253,7 +262,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Vaccum.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Vaccum");
-					API.setitem(p, Material.EYE_OF_ENDER, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.EYE_OF_ENDER, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE,
+							0, false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -266,7 +276,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Teleman.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Teleman");
-					API.setitem(p, Material.FIREBALL, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.FIREBALL, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}
@@ -279,7 +290,8 @@ public class Kit implements CommandExecutor, Listener {
 					KitAPI.Kit.add(p.getName());
 					KitAPI.Thresh.add(p.getName());
 					p.sendMessage(API.sev + "Voce pegou o Kit§a§l Thresh");
-					API.setitem(p, Material.LEASH, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,false);
+					API.setitem(p, Material.LEASH, "§7- §c§lKit §7- " + p.getName(), 1, Enchantment.ARROW_DAMAGE, 0,
+							false);
 				} else {
 					p.sendMessage(API.s);
 				}

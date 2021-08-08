@@ -17,71 +17,73 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import me.Pedro.Main;
 
 public class Protecao implements Listener {
-	
-	public static ArrayList<Player> protecao = new ArrayList<>();
-	
 
-	
+	public static ArrayList<Player> protecao = new ArrayList<>();
+
 	public Protecao(Main main) {
 	}
 
 	@EventHandler
 	public void entrar(PlayerJoinEvent e) {
 		e.getPlayer().teleport(Bukkit.getWorld("world").getSpawnLocation());
-		if(protecao.contains(e.getPlayer())) {
+		if (protecao.contains(e.getPlayer())) {
 			protecao.remove(e.getPlayer());
 			e.getPlayer().sendMessage(API.sev + "Voce recebeu a protecao do Spawn!");
 		}
 	}
-		@EventHandler
-		public void entrar1(PlayerRespawnEvent e) {
-			e.getPlayer().teleport(Bukkit.getWorld("world").getSpawnLocation());
-			if(protecao.contains(e.getPlayer())) {
-				protecao.remove(e.getPlayer());
-				e.getPlayer().sendMessage(API.sev + "Voce recebeu a protecao do Spawn!");
-			}
+
+	@EventHandler
+	public void entrar1(PlayerRespawnEvent e) {
+		e.getPlayer().teleport(Bukkit.getWorld("world").getSpawnLocation());
+		if (protecao.contains(e.getPlayer())) {
+			protecao.remove(e.getPlayer());
+			e.getPlayer().sendMessage(API.sev + "Voce recebeu a protecao do Spawn!");
+		}
 	}
-	
+
 	@EventHandler
 	public void dano(EntityDamageByEntityEvent e) {
-		
-		if (e.getDamager() instanceof Arrow){
+
+		if (e.getDamager() instanceof Arrow) {
 			Arrow arrow = (Arrow) e.getDamager();
-			 if (arrow.getShooter() instanceof Player){
-				 if(arrow.getShooter().equals(e.getEntity())) {
-	            		e.setCancelled(true);
-	            	}
-				 if(!protecao.contains(e.getEntity())) {
-						e.setCancelled(true);
-					}
-			 }
-		}
-		Material material = Material.FISHING_ROD;
-     	if(material == Material.FISHING_ROD) {
-     		 if(!protecao.contains(e.getEntity())) {
+			if (arrow.getShooter() instanceof Player) {
+				if (arrow.getShooter().equals(e.getEntity())) {
 					e.setCancelled(true);
 				}
-     		
-     	}
-     	if(e.getDamager() instanceof FishHook) {
+				if (!protecao.contains(e.getEntity())) {
+					e.setCancelled(true);
+				}
+			}
+		}
+		Material material = Material.FISHING_ROD;
+		if (material == Material.FISHING_ROD) {
+			if (!protecao.contains(e.getEntity())) {
+				e.setCancelled(true);
+			}
+
+		}
+		if (e.getDamager() instanceof FishHook) {
 			FishHook fish = (FishHook) e.getDamager();
-			if(fish.getShooter().equals(e.getEntity())) {
+			if (fish.getShooter().equals(e.getEntity())) {
 				e.setCancelled(true);
 			}
 		}
-		if(!(e.getEntity() instanceof Player)) return;
-		if(!(e.getDamager() instanceof Player)) return;
-		if(!protecao.contains(e.getEntity())) {
+		if (!(e.getEntity() instanceof Player))
+			return;
+		if (!(e.getDamager() instanceof Player))
+			return;
+		if (!protecao.contains(e.getEntity())) {
 			e.setCancelled(true);
 		}
-		if(!protecao.contains(e.getDamager())) {
+		if (!protecao.contains(e.getDamager())) {
 			e.setCancelled(true);
 		}
 	}
-	
+
 	@EventHandler
 	public void mexer(PlayerMoveEvent e) {
-		if(protecao.contains(e.getPlayer())) return;
+		if (protecao.contains(e.getPlayer()))
+			return;
 		Player p = e.getPlayer();
 		if (p.getLocation().getBlockX() > Bukkit.getWorld("world").getSpawnLocation().getBlockX() + 10) {
 			p.sendMessage(API.sev + "Voce perdeu a protecao do Spawn!");

@@ -30,14 +30,15 @@ public class Evento implements Listener {
 		Habilidade.removeAbility(p);
 		KitAPI.remove(p);
 	}
-	@EventHandler 
+
+	@EventHandler
 	public void re(PlayerRespawnEvent e) {
 		Player p = e.getPlayer();
 		API.GiveSpawn(p);
 		KitAPI.remove(p);
 		Habilidade.removeAbility(p);
 	}
-	
+
 	@EventHandler
 	public void abrirClasses(PlayerInteractEvent evento) {
 		Player jogador = evento.getPlayer();
@@ -53,6 +54,7 @@ public class Evento implements Listener {
 			}
 		}
 	}
+
 	@EventHandler
 	public void abrirClasse1s(PlayerInteractEvent evento) {
 		Player jogador = evento.getPlayer();
@@ -68,6 +70,7 @@ public class Evento implements Listener {
 			}
 		}
 	}
+
 	@EventHandler
 	public void abrirClass1e1s(PlayerInteractEvent evento) {
 		Player jogador = evento.getPlayer();
@@ -83,6 +86,7 @@ public class Evento implements Listener {
 			}
 		}
 	}
+
 	@EventHandler
 	public void abrirClass1e112s(PlayerInteractEvent evento) {
 		Player jogador = evento.getPlayer();
@@ -98,6 +102,7 @@ public class Evento implements Listener {
 			}
 		}
 	}
+
 	@EventHandler
 	public void abrirClass1e1112s(PlayerInteractEvent evento) {
 		Player jogador = evento.getPlayer();
